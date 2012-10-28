@@ -11,12 +11,10 @@
     <script src="js/tracker/color.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/base.css" type="text/css" charset="utf-8"/>
     <style type="text/css">
-      video { float: left; }
       canvas {
         margin: 10px auto 0;
         display: block;
         border: 1px #000 solid;
-        float: right;
       }
     </style>
   </head>
@@ -24,7 +22,7 @@
     <canvas id="draw" width="600" height="400"></canvas>
     <script>
       var myCanvas = document.getElementById("draw").getContext("2d");
-      var videoCamera = new tracking.VideoCamera().render();
+      var videoCamera = new tracking.VideoCamera().hide().render();
       var t1 = videoCamera.track({
         type: 'color',
         color: 'magenta',
